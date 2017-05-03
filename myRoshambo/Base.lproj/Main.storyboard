@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Play View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PlayViewController" customModule="myRoshambo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yem-mJ-BaO">
+                                <rect key="frame" x="16" y="28" width="288" height="532"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YPz-64-Nq0">
+                                        <rect key="frame" x="83" y="0.0" width="122" height="172"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3W-Bi-mbd" userLabel="Paper">
+                                                <rect key="frame" x="0.0" y="0.0" width="122" height="172"/>
+                                                <state key="normal" title="Paper" image="paper"/>
+                                                <connections>
+                                                    <action selector="paper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rU2-AG-7GY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="eJM-7g-6eH">
+                                        <rect key="frame" x="0.0" y="180" width="288" height="172"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoS-vT-Icv" userLabel="Rock">
+                                                <rect key="frame" x="0.0" y="0.0" width="136.5" height="172"/>
+                                                <state key="normal" title="Rock" image="rock"/>
+                                                <connections>
+                                                    <action selector="rock:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hl9-g5-p4p"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3n-lR-wvV" userLabel="Scissors">
+                                                <rect key="frame" x="151.5" y="0.0" width="136.5" height="172"/>
+                                                <state key="normal" title="Scissors" image="scissors"/>
+                                                <connections>
+                                                    <segue destination="aNn-EZ-iio" kind="presentation" id="Ku7-PF-uNs"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Play!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLP-Yt-141">
+                                        <rect key="frame" x="105.5" y="360" width="77.5" height="172"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yem-mJ-BaO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Qxn-u3-SpC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yem-mJ-BaO" secondAttribute="trailing" id="WHs-YH-rgo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yem-mJ-BaO" secondAttribute="bottom" constant="8" symbolic="YES" id="mqX-0f-3hg"/>
+                            <constraint firstItem="yem-mJ-BaO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="thy-jS-Pst"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="aNn-EZ-iio" kind="presentation" identifier="paperSegue" id="7h1-OH-dZD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Results View Controller-->
+        <scene sceneID="El7-nn-nJD">
+            <objects>
+                <viewController storyboardIdentifier="ResultsViewController" id="aNn-EZ-iio" customClass="ResultsViewController" customModule="myRoshambo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vDC-Ht-hvx"/>
+                        <viewControllerLayoutGuide type="bottom" id="F9n-x9-7bB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qjm-PU-bQe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qkX-6i-y3g">
+                                <rect key="frame" x="16" y="28" width="288" height="532"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tie" translatesAutoresizingMaskIntoConstraints="NO" id="YFF-Ly-at1">
+                                        <rect key="frame" x="52.5" y="0.0" width="183" height="172"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8L1-Xc-cFL">
+                                        <rect key="frame" x="97.5" y="180" width="93.5" height="172"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRz-GC-quC">
+                                        <rect key="frame" x="106" y="360" width="76" height="172"/>
+                                        <state key="normal" title="Play Again!"/>
+                                        <connections>
+                                            <action selector="playAgain:" destination="aNn-EZ-iio" eventType="touchUpInside" id="Y6a-Cy-KYr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="qkX-6i-y3g" secondAttribute="trailing" id="05b-NB-3rd"/>
+                            <constraint firstItem="F9n-x9-7bB" firstAttribute="top" secondItem="qkX-6i-y3g" secondAttribute="bottom" constant="8" symbolic="YES" id="Dex-u2-FRm"/>
+                            <constraint firstItem="qkX-6i-y3g" firstAttribute="top" secondItem="vDC-Ht-hvx" secondAttribute="bottom" constant="8" symbolic="YES" id="Ljf-DG-FiO"/>
+                            <constraint firstItem="qkX-6i-y3g" firstAttribute="leading" secondItem="Qjm-PU-bQe" secondAttribute="leadingMargin" id="gCj-fZ-uBO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outletCollection property="resultImage" destination="YFF-Ly-at1" collectionClass="NSMutableArray" id="pL5-aY-0ft"/>
+                        <outletCollection property="resultLabel" destination="8L1-Xc-cFL" collectionClass="NSMutableArray" id="Cqd-jJ-Yow"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hA7-Ev-nBR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="809" y="139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="paper" width="75" height="65"/>
+        <image name="rock" width="75" height="65"/>
+        <image name="scissors" width="75" height="65"/>
+        <image name="tie" width="183" height="200"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="7h1-OH-dZD"/>
+    </inferredMetricsTieBreakers>
+</document>
