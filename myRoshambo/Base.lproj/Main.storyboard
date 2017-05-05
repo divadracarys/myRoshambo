@@ -123,8 +123,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outletCollection property="resultImage" destination="YFF-Ly-at1" collectionClass="NSMutableArray" id="pL5-aY-0ft"/>
-                        <outletCollection property="resultLabel" destination="8L1-Xc-cFL" collectionClass="NSMutableArray" id="Cqd-jJ-Yow"/>
+                        <outlet property="resultImage" destination="YFF-Ly-at1" id="bGA-OZ-U8R"/>
+                        <outlet property="resultLabel" destination="8L1-Xc-cFL" id="r75-wT-YVJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hA7-Ev-nBR" userLabel="First Responder" sceneMemberID="firstResponder"/>
